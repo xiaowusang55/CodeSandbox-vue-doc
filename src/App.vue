@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <!-- <div>
+    <div id="app">
+        <!-- <div>
       <BaseTextInput v-model="msg" placeholder="hahha"></BaseTextInput>
       <br>
       <CustomCheckbox v-model="checkedBox" label="checkbox1"></CustomCheckbox>
@@ -27,13 +27,13 @@
       <template v-slot:footer>
         <p>Here's some contact info</p>
       </template>
-    </BaseLayout>-->
-    <currentUser>
-      <template #lastname="{obj}">{{obj.lastName}}</template>
-      <template #firstname="{obj}">{{obj.firstName}}</template>
-      <template #default="{obj={age: 152}}">{{obj.age}}</template>
-    </currentUser>
-  </div>
+        </BaseLayout>-->
+        <currentUser>
+            <template #lastname="{obj}">{{obj.lastName}}</template>
+            <template #firstname="{obj}">{{obj.firstName}}</template>
+            <template #default="{usr={name: 'xiaowusang'}}">{{usr.name}}</template>
+        </currentUser>
+    </div>
 </template>
 
 <script>
@@ -47,31 +47,31 @@ import BaseLayout from "./components/BaseLayout.vue";
 import currentUser from "./components/currentUser.vue";
 
 export default {
-  name: "App",
-  components: {
-    BaseTextInput,
-    CustomCheckbox,
-    CustomRadio,
-    CustomSelect,
-    NavigationLink,
-    SubmitButton,
-    BaseLayout,
-    currentUser
-  },
-  data() {
-    return {
-      msg: "",
-      checkedBox: false,
-      otherCheckedBox: false,
-      checkedRadio: true,
-      selected: "",
-      obj: [
-        { name: "bily", age: 18 },
-        { name: "lily", age: 18 },
-        { name: "smith", age: 17 }
-      ]
-    };
-  }
+    name: "App",
+    components: {
+        BaseTextInput,
+        CustomCheckbox,
+        CustomRadio,
+        CustomSelect,
+        NavigationLink,
+        SubmitButton,
+        BaseLayout,
+        currentUser
+    },
+    data() {
+        return {
+            msg: "",
+            checkedBox: false,
+            otherCheckedBox: false,
+            checkedRadio: true,
+            selected: "",
+            obj: [
+                { name: "bily", age: 18 },
+                { name: "lily", age: 18 },
+                { name: "smith", age: 17 }
+            ]
+        };
+    }
 };
 </script>
 
